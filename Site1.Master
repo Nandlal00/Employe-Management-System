@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Employe_Management_System.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        .links {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style3 {
+            text-align: center;
+            font-size: x-large;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            height: 104px;
+            background-color: #0099CC;
+             border-radius: 10px;
+        	box-shadow: 5px 20px 50px #000;
+            background: blue;
+            background-color: transparent;
+        }
+        .auto-style4 {
+            font-size: medium;
+        }
+        .auto-style5 {
+            color: #FFFFFF;
+        }
+        .auto-style6 {
+            text-decoration: none;
+            color: white;
+            font-size: medium;
+        }
+        body{
+            background-image:url('Images/web.jpg');
+            background-size: 100%;
+        }
+        .logout{
+            border-radius: 10px;
+        }
+        #HyperLink6 {
+            text-decoration: none;
+        }
+        #HyperLink7 {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="auto-style3">
+                <span class="auto-style5"><strong>Employee Management System<br />
+                </strong>
+                </span><br />
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style6" NavigateUrl="~/home.aspx">Home</asp:HyperLink>
+                <span class="auto-style4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="links" NavigateUrl="~/NewEmp.aspx">New Employee</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink3" runat="server" CssClass="links" NavigateUrl="~/Search.aspx">Search</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;
+&nbsp;
+                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="links" NavigateUrl="~/AllEmp.aspx">All Employee</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="links" NavigateUrl="~/Edit.aspx">Edit</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink6" runat="server" CssClass="auto-style5" NavigateUrl="~/ChangePass.aspx">Change Password</asp:HyperLink>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/NewLogin.aspx" CssClass="auto-style5">Add Employee</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <asp:Button ID="Button1" runat="server" Text="logout" CssClass="logout" ForeColor="Black" Height="27px" OnClick="Button1_Click" Width="55px" />
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
